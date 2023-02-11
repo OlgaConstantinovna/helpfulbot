@@ -10,11 +10,11 @@ def send_welcome(message):
 @bot.message_handler(commands=['question'])   
 def prepare_to_question(message):
     bot.reply_to(message, 'Задайте свой вопрос 1 сообщением я предам его опретору')
-    bot.register_step(message,write_question())
+    bot.register_next_step_handler(message,write_question)
 
 def write_question(message):
 	data = open('question.txt', 'a', encoding='utf-8')
-	data.write(f'{message.from_user.id}%%{message.from_user.firs_name}: {message.text}')
+	data.write(f'{message.from_user.id}--{message.from_user.first_name}: {message.text}\n')
 	data.close()
 	bot.reply_to(message, 'Ваш вопрос отправлен оератору. Среднее время ожидания ответа 2 часа')
 

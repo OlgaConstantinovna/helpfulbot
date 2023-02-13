@@ -3,7 +3,7 @@ import telebot
 def send_answer(id, question, answer):
     bot.send_message(id, f'{question}\nОтвет: {answer}')
 
-token = "5888104101:AAGJrGV1UH2ky0DmqkxicD-k5lixo8D1FAw"
+token = "YOUR_BOT_TOKEN"
 bot = telebot.TeleBot(token)
 
 data = open('question.txt', mode='r', encoding="utf-8")

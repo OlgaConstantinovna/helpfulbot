@@ -14,7 +14,7 @@ def prepare_to_question(message):
 
 def write_question(message):
 	data = open('question.txt', 'a', encoding='utf-8')
-	data.write(f'{message.from_user.id}--{message.from_user.first_name}: {message.text}\n')
+	data.write(f'{message.from_user.id}%%{message.from_user.first_name}: {message.text}\n')
 	data.close()
 	bot.reply_to(message, 'Ваш вопрос отправлен оератору. Среднее время ожидания ответа 2 часа')
 

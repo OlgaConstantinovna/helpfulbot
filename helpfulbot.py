@@ -5,7 +5,7 @@ from telebot import types
 game_started = False
 r_number = None
 
-token = "5888104101:AAGJrGV1UH2ky0DmqkxicD-k5lixo8D1FAw"
+token = "YOUR token"
 bot = telebot.TeleBot(token)
 
 markup = types.ReplyKeyboardMarkup(row_width=3)
